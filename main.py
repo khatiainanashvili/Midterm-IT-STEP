@@ -21,14 +21,12 @@
  
 # 5. მაგალითი: 
 # მოიყვანეთ მაგალითი იმის სადემონსტრაციოდ, თუ როგორ მუშაობს აპლიკაცია წიგნების დამატების, სიის დათვალიერებისა და წიგნის ძიების პროცესში. 
- 
- 
 # შენიშვნა: გამოიყენეთ ობიექტზე ორიენტირებული პროგრამირების ცნებები, როგორიცაა კლასები და ობიექტები თქვენი კოდის სტრუქტურირებისთვის. ყურადღება მიაქციეთ ინკაფსულაციას, მემკვიდრეობას და პოლიმორფიზმს, სადაც ეს შესაძლებელია. 
 
 class Book:
-    def __init__(self, title, author, year):
-        self.title = title
-        self.author = author
+    def __init__(self, title, author, year):    
+        self.title = title 
+        self.author = author 
         self.year = year
 
     def __str__(self):
@@ -37,7 +35,12 @@ class Book:
 
 class BookManager:
     def __init__(self):
-        self.books = []
+        self.books = [
+
+            Book("1984", "George Orwell", 1949),
+            Book("To Kill a Mockingbird", "Harper Lee", 1960),
+            Book("The Great Getsby", "F. Skott Fitzgerard", 1925)
+        ]
 
     def add_book(self, title, author, year):
         if not title.strip() or not author.strip() or not year.strip():
